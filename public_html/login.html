@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="css/errorDiv.css" rel="stylesheet" type="text/css"/>
+        <script src="js/responsive.js" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            var url = window.location.pathname;
+            localStorage.clear();
+            var filename = url.substring(url.lastIndexOf('/') + 1);
+            if (localStorage.getItem("login") == "true" && filename == 'login.html') {
+                window.location.href = "index.html";
+            } else if (localStorage.getItem("login") == "false" && filename != 'login.html') {
+                window.location.href = "login.html";
+            }
+        </script>
+                <link href="css/loading.css" rel="stylesheet" type="text/css"/>
+        <script src="js/loading.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div id="load"></div>
+        <div class="success"></div>
+        <div class="error"></div>
+        <div class="validation"></div>
+        
+        <div class="main">
+            <img class="background" src="images/background_img.png" alt=""/>
+            <div class="fields">
+                <div class="logo"><img src="images/logo.png" alt=""/></div>
+                <form action="index.html">
+                    <input type="email" name="fname" id="email" class="email-login" placeholder="Email" required>
+                    <input type="password" name="fname" id="password" class="password-login" placeholder="Password" required> 
+
+                    <input type="submit" class="button-log" id="login" value="Login">
+                </form>
+            
+            <a href="registration.html"><div class="span-log">Create Account</div></a>
+            <div class="br" style="top: 110%;"></div>
+        </div>
+        </div>
+        <script src="js/jsencrypt.min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/login_registration.js"></script>         
+    </body>
+</html>

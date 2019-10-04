@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <link href="css/main.css" rel="stylesheet" type="text/css"/> 
+        <script src="js/responsive.js" type="text/javascript"></script> 
+        <link href="css/errorDiv.css" rel="stylesheet" type="text/css"/>
+                <link href="css/loading.css" rel="stylesheet" type="text/css"/>
+        <script src="js/loading.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            if(localStorage.getItem("language") == null)
+            {
+                localStorage.setItem("language", "English");
+            }
+            
+            var url = window.location.pathname;
+            var filename = url.substring(url.lastIndexOf('/') + 1);
+            if (localStorage.getItem("login") == "true" && filename == 'login.html') {
+                window.location.href = "index.html";
+            } else if (localStorage.getItem("login") == "false" || localStorage.getItem("login") == null && filename != 'login.html') {
+                window.location.href = "login.html";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="load"></div>
+        <div class="warning"></div>
+       <div class="header"> 
+           
+           <img class="tutum" src="images/tutum_down.png" alt=""/>
+            
+        </div>
+        
+        <div class="main">
+            
+            <img class="background" src="images/background_img.png" alt=""/>
+            <div class="buttons">
+                <div class="f-l">
+                    <img src="icons/f-l.png" alt=""/>
+                    <p class="f-l-t" id="contract1">FREELANCE</p>
+                </div>
+                <a href="loan_money_form.html">
+                    <div class="l-m">
+                        <img src="icons/l-m.png" alt=""/>
+                        <p class="l-m-t" id="contract2">LOAN MONEY</p>
+                    </div></a>
+                <div class="g-a">
+                    <img src="icons/g-a.png" alt=""/>
+                    <p class="g-a-t" id="contract3">GUEST AGREEMENT</p>
+                </div>
+                <div class="r-l">
+                    <img src="icons/r-l.png" alt=""/>
+                    <p class="r-l-t" id="contract4">RENT/LEND</p>
+                </div>
+                <div class="b-s">
+                    <img src="icons/b-s.png" alt=""/>
+                    <p class="b-s-t" id="contract5">BUY/SELL</p>
+                </div>
+                <div class="k-c">
+                    <img src="icons/k-c.png" alt=""/>
+                    <p class="k-c-t" id="contract6">KEEP CONFIDENTIAL</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="my_contracts.html"><img class="contracts" src="icons/contracts.png" alt=""/></a>
+            <a href="index.html"><img class="home" src="icons/home.png" alt=""/></a>
+            <a href="settings.html"><img class="settings" src="icons/settings.png" alt=""/></a>
+        </div>
+        <footer>
+            <script src="js/jsencrypt.min.js" type="text/javascript"></script>
+            <script src="js/contractVerification.js" type="text/javascript"></script>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,413 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js/responsive.js" type="text/javascript"></script> 
+        <link href="css/loading.css" rel="stylesheet" type="text/css"/>
+        <script src="js/loading.js" type="text/javascript"></script> 
+        <script type="text/javascript">
+            var url = window.location.pathname;
+            var filename = url.substring(url.lastIndexOf('/') + 1);
+            if (localStorage.getItem("login") == "true" && filename == 'login.html') {
+                window.location.href = "index.html";
+            } else if (localStorage.getItem("login") == "false" || localStorage.getItem("login") == null && filename != 'login.html') {
+                window.location.href = "login.html";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="load"></div>
+        <div class="validation"></div>
+        <div class="header">
+            <img style="width: 60%; height: 50%; top: 29%; left: 21%;" class="tutum" src="images/loan.png" alt=""/>
+            <a href="javascript:history.back()"><div>
+                    <div class="arrow1"></div>
+                    <div class="arrow2"></div>
+                    <div class="arrow3"></div>
+                </div></a>
+        </div>
+        <div class="main">
+            <img class="background" src="images/background_img.png" alt=""/>
+            <div class="fields">
+                <form action="loan_money_agreement.html" id="form">
+                    <input type="text" name="fname" class="l-f-n field" id="lenderName" placeholder="Lender's Full Name" required>
+                    <div class='field-img l-f-n-img'><img class="images" src="icons/if_user_male_2639944.png" alt=""/></div>
+                    <img class="i1 images" id="myBtn" src="images/i.png" alt=""/>
+
+                    <input type="email" name="fname" class="l-e field" id="lenderEmail" placeholder="Lender's Email" required>
+                    <div class='field-img l-e-img'><img class="images" src="icons/if__email_2559820.png" alt=""/></div>
+                    <img class="i2 images" id="myBtn2" src="images/i.png" alt=""/>
+
+                    <input type="text" name="fname" class="l-a field" id="loanAmount" placeholder="Loan Amount (€)" required>
+                    <div class='field-img l-a-img'><img class="images" style="padding-top: 8%;" src="icons/if_money_bag_2639867.png" alt=""/></div>
+                    <img class="i3 images" id="myBtn3" src="images/i.png" alt=""/>
+
+                    <input type="text" name="fname" class="b-f-n field" id="borrowerName" placeholder="Borrower's Full Name" required>
+                    <div class='field-img b-f-n-img'><img class="images" src="icons/if_icon-person_211874.png" alt=""/></div>
+                    <img class="i4 images" id="myBtn4" src="images/i.png" alt=""/>
+
+                    <input type="email" name="fname" class="b-e field" id="borrowerEmail" placeholder="Borrower's Email" required>
+                    <div class='field-img b-e-img'><img class="images" src="icons/if__email_2559820.png" alt=""/></div>
+                    <img class="i5 images" id="myBtn5" src="images/i.png" alt=""/>
+
+                    <input type="email" name="fname" class="c field" id="county" placeholder="County" required>
+                    <div class='field-img c-img'><img class="images" src="icons/earth.png" alt=""/></div>
+                    <img class="i6 images" id="myBtn6" src="images/i.png" alt=""/>
+
+                    <input type="text" name="fname" class="y-i-r field" id="interest" placeholder="Yearly Interest Rate" required>
+                    <div class='field-img y-i-r-img'><img class="images" style="padding-top: 5%;" src="icons/if_star_326703.png" alt=""/></div>
+                    <img class="i7 images" id="myBtn7" src="images/i.png" alt=""/>
+
+                    <input type="text" data-role="date" name="fname" class="l-s-d field" placeholder="Loan Start Date" data-disable-touch-keyboard onclick="$('[data-disable-touch-keyboard]').attr('readonly', 'readonly');" id="loanStartDate" required>
+                    <div class='field-img l-s-d-img'><img class="images" style="height: 80%; padding-top: 5%;" src="icons/if_today_326713.png" alt=""/></div>
+                    <img class="i8 images" id="myBtn8" src="images/i.png" alt=""/>
+
+                    <input type="text" data-role="date" name="fname" class="l-r-b field" id="loanEndDate" placeholder="Loan Repaid by" data-disable-touch-keyboard onclick="$('[data-disable-touch-keyboard]').attr('readonly', 'readonly');" required>
+                    <div class='field-img l-r-b-img'><img class="images" style="height: 80%; padding-top: 5%;" src="icons/if_today_326713.png" alt=""/></div>
+                    <img class="i9 images" id="myBtn9" src="images/i.png" alt=""/>
+
+                    <div class="button-agr" style="margin-top: 19%;">Create contract</div>
+                    <div class="br" style="top:130%;"></div>
+                </form>
+
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content1" id="modal">
+                        <span class="close">&times;</span>
+                        <h3 id="modalLenderFullNameTitle">Lender's Full Name</h3>
+                        <hr>
+                        <p id="modalLenderFullName">This is the full name of the person who is lending the money.</p>
+                        <p id="modalLenderFullNameExample">Example: John Doe</p>
+                    </div>
+                </div>
+                <div id="myModal2" class="modal2">
+                    <!-- Modal content -->
+                    <div class="modal-content2" id="modal2">
+                        <span class="close2">&times;</span>
+                        <h3 id="modalLenderEmailTitle">Lender's Email</h3>
+                        <hr>
+                        <p id="modalLenderEmail">This is the email of the person who is lending the money.</p>
+                        <p id="modalLenderEmailExample">Example: john@gmail.com</p>
+                    </div>
+                </div>
+                <div id="myModal3" class="modal3">
+                    <!-- Modal content -->
+                    <div class="modal-content3" id="modal3">
+                        <span class="close3">&times;</span>
+                        <h3 id="modalLoanAmountTitle">Loan Amount</h3>
+                        <hr>
+                        <p id="modalLoanAmount">This is the amount in (€) the lender is loaning to the borrower.</p>
+                        <p id="modalLoanAmountExample">Example: 100</p>
+                    </div>
+                </div>
+                <div id="myModal4" class="modal4">
+                    <!-- Modal content -->
+                    <div class="modal-content4" id="modal4">
+                        <span class="close4">&times;</span>
+                        <h3 id="modalBorrowerFullNameTitle">Borrower's Full Name</h3>
+                        <hr>
+                        <p id="modalBorrowerFullName">This is the full name of the person who is borrowing the money.</p>
+                        <p id="modalBorrowerFullNameExample">Example: Bob Smith</p>
+                    </div>
+                </div>
+                <div id="myModal5" class="modal5">
+                    <!-- Modal content -->
+                    <div class="modal-content5" id="modal5">
+                        <span class="close5">&times;</span>
+                        <h3 id="modalBorrowerEmailTitle">Borrowers's Email</h3>
+                        <hr>
+                        <p id="modalBorrowerEmail">This is the email of the person who is borrowing the money.</p>
+                        <p id="modalBorrowerEmailExample">Example: bob@gmail.com</p>
+                    </div>
+                </div>
+                <div id="myModal6" class="modal6">
+                    <!-- Modal content -->
+                    <div class="modal-content6" id="modal6">
+                        <span class="close6">&times;</span>
+                        <h3 id="modalCountyTitle">County</h3>
+                        <hr>
+                        <p id="modalCounty">This response will determine which jurisdiction's law governs the contract.</p>
+                        <p id="modalCountyExample">Example: Louth</p>
+                    </div>
+                </div>
+                <div id="myModal7" class="modal7">
+                    <!-- Modal content -->
+                    <div class="modal-content7" id="modal7">
+                        <span class="close7">&times;</span>
+                        <h3 id="modalInterestTitle">Yearly Interest Rate</h3>
+                        <hr>
+                        <p id="modalInterest">This is the annualized percentage of interest that the borrower will pay on the loan.</p>
+                        <p id="modalInterestExample">Example: 1</p>
+                    </div>
+                </div>
+                <div id="myModal8" class="modal8">
+                    <!-- Modal content -->
+                    <div class="modal-content8" id="modal8">
+                        <span class="close8">&times;</span>
+                        <h3 id="modalLoanStartDateTitle">Loan Start Date</h3>
+                        <hr>
+                        <p id="modalLoanStartDate">This is the date on which the loan period begins.</p>
+                        <p id="modalLoanStartDateExample">Example: 15 February 2019</p>
+                    </div>
+                </div>
+                <div id="myModal9" class="modal9">
+                    <!-- Modal content -->
+                    <div class="modal-content9" id="modal9">
+                        <span class="close9">&times;</span>
+                        <h3 id="modalLoanEndDateTitle">Loan End Date</h3>
+                        <hr>
+                        <p id="modalLoanEndDate">This is the date by which the borrower must repay the loan.</p>
+                        <p id="modalLoanEndDateExample">Example: 15 February 2020</p>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+        <footer>
+            <div class="footer">
+                <a href="my_contracts.html"><img class="contracts" src="icons/contracts.png" alt=""/></a>
+                <a href="index.html"><img class="home" src="icons/home.png" alt=""/></a>
+                <a href="settings.html"><img class="settings" src="icons/settings.png" alt=""/></a>
+            </div> 
+            <link href="css/errorDiv.css" rel="stylesheet" type="text/css"/>
+            <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css">
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  
+            <link href="css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+            <script src="js/setLoanContractDetails.js" type="text/javascript"></script>
+            <script>
+                        // Get the modal
+                        var modal = document.getElementById('myModal');
+                        var modal2 = document.getElementById('myModal2');
+                        var modal3 = document.getElementById('myModal3');
+                        var modal4 = document.getElementById('myModal4');
+                        var modal5 = document.getElementById('myModal5');
+                        var modal6 = document.getElementById('myModal6');
+                        var modal7 = document.getElementById('myModal7');
+                        var modal8 = document.getElementById('myModal8');
+                        var modal9 = document.getElementById('myModal9');
+
+                        // Get the button that opens the modal
+                        var btn = document.getElementById("myBtn");
+                        var btn2 = document.getElementById("myBtn2");
+                        var btn3 = document.getElementById("myBtn3");
+                        var btn4 = document.getElementById("myBtn4");
+                        var btn5 = document.getElementById("myBtn5");
+                        var btn6 = document.getElementById("myBtn6");
+                        var btn7 = document.getElementById("myBtn7");
+                        var btn8 = document.getElementById("myBtn8");
+                        var btn9 = document.getElementById("myBtn9");
+
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+                        var span2 = document.getElementsByClassName("close2")[0];
+                        var span3 = document.getElementsByClassName("close3")[0];
+                        var span4 = document.getElementsByClassName("close4")[0];
+                        var span5 = document.getElementsByClassName("close5")[0];
+                        var span6 = document.getElementsByClassName("close6")[0];
+                        var span7 = document.getElementsByClassName("close7")[0];
+                        var span8 = document.getElementsByClassName("close8")[0];
+                        var span9 = document.getElementsByClassName("close9")[0];
+
+
+                        // When the user clicks the button, open the modal 
+                        btn.onclick = function () {
+                            modal.style.display = "block";
+                        }
+                        btn2.onclick = function () {
+                            modal2.style.display = "block";
+                        }
+                        btn3.onclick = function () {
+                            modal3.style.display = "block";
+                        }
+                        btn4.onclick = function () {
+                            modal4.style.display = "block";
+                        }
+                        btn5.onclick = function () {
+                            modal5.style.display = "block";
+                        }
+                        btn6.onclick = function () {
+                            modal6.style.display = "block";
+                        }
+                        btn7.onclick = function () {
+                            modal7.style.display = "block";
+                        }
+                        btn8.onclick = function () {
+                            modal8.style.display = "block";
+                        }
+                        btn9.onclick = function () {
+                            modal9.style.display = "block";
+                        }
+
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function () {
+                            modal.style.display = "none";
+                        }
+                        span2.onclick = function () {
+                            modal2.style.display = "none";
+                        }
+                        span3.onclick = function () {
+                            modal3.style.display = "none";
+                        }
+                        span4.onclick = function () {
+                            modal4.style.display = "none";
+                        }
+                        span5.onclick = function () {
+                            modal5.style.display = "none";
+                        }
+                        span6.onclick = function () {
+                            modal6.style.display = "none";
+                        }
+                        span7.onclick = function () {
+                            modal7.style.display = "none";
+                        }
+                        span8.onclick = function () {
+                            modal8.style.display = "none";
+                        }
+                        span9.onclick = function () {
+                            modal9.style.display = "none";
+                        }
+
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function (event) {
+                            if (event.target == modal || event.target == modal2 || event.target == modal3 || event.target == modal4 || event.target == modal5 || event.target == modal6 || event.target == modal7 || event.target == modal8 || event.target == modal9) {
+                                modal.style.display = "none";
+                                modal2.style.display = "none";
+                                modal3.style.display = "none";
+                                modal4.style.display = "none";
+                                modal5.style.display = "none";
+                                modal6.style.display = "none";
+                                modal7.style.display = "none";
+                                modal8.style.display = "none";
+                                modal9.style.display = "none";
+                            }
+                        }
+                        if (localStorage.getItem("language") == "Russian")
+                        {
+                            var monthNames = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+                            var weekDays = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+                            var weekdaysShort = ['Вос', 'Пон', 'Вто', 'Сре', 'Чет', 'Пят', 'Суб'];
+
+                            var picker = new Pikaday(
+                                    {
+                                        field: document.getElementById('loanStartDate'),
+                                        firstDay: 1,
+                                        minDate: new Date(),
+                                        maxDate: new Date(2020, 12, 31),
+                                        yearRange: [2000, 2020],
+                                        i18n: {
+                                            previousMonth: 'Прошлый месяц',
+                                            nextMonth: 'Следующий месяц',
+                                            months: monthNames,
+                                            weekdays: weekDays,
+                                            weekdaysShort: weekdaysShort
+                                        },
+                                        toString: function (date) {
+                                            var parts = [date.getDate(), monthNames[date.getMonth()], date.getFullYear()];
+                                            return parts.join(" ");
+                                        }
+                                    });
+
+                            var picker2 = new Pikaday(
+                                    {
+                                        field: document.getElementById('loanEndDate'),
+                                        firstDay: 1,
+                                        minDate: new Date(),
+                                        maxDate: new Date(2020, 12, 31),
+                                        yearRange: [2000, 2020],
+                                        i18n: {
+                                            previousMonth: 'Прошлый месяц',
+                                            nextMonth: 'Следующий месяц',
+                                            months: monthNames,
+                                            weekdays: ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'],
+                                            weekdaysShort: ['Вос', 'Пон', 'Вто', 'Сре', 'Чет', 'Пят', 'Суб']
+                                        },
+                                        toString: function (date) {
+                                            var parts = [date.getDate(), monthNames[date.getMonth()], date.getFullYear()];
+                                            return parts.join(" ");
+                                        }
+                                    });
+                        } else if (localStorage.getItem("language") == "English")
+                        {
+                            var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                            var weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                            var weekdaysShort = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+                            var picker = new Pikaday(
+                                    {
+                                        field: document.getElementById('loanStartDate'),
+                                        firstDay: 1,
+                                        minDate: new Date(),
+                                        maxDate: new Date(2020, 12, 31),
+                                        yearRange: [2000, 2020],
+                                        i18n: {
+                                            previousMonth: 'Previous Month',
+                                            nextMonth: 'Next Month',
+                                            months: monthNames,
+                                            weekdays: weekDays,
+                                            weekdaysShort: weekdaysShort
+                                        },
+                                        toString: function (date) {
+                                            var parts = [date.getDate(), monthNames[date.getMonth()], date.getFullYear()];
+                                            return parts.join(" ");
+                                        }
+                                    });
+
+                            var picker2 = new Pikaday(
+                                    {
+                                        field: document.getElementById('loanEndDate'),
+                                        firstDay: 1,
+                                        minDate: new Date(),
+                                        maxDate: new Date(2020, 12, 31),
+                                        yearRange: [2000, 2020],
+                                        i18n: {
+                                            previousMonth: 'Previous Month',
+                                            nextMonth: 'Next Month',
+                                            months: monthNames,
+                                            weekdays: weekDays,
+                                            weekdaysShort: weekdaysShort
+                                        },
+                                        toString: function (date) {
+                                            var parts = [date.getDate(), monthNames[date.getMonth()], date.getFullYear()];
+                                            return parts.join(" ");
+                                        }
+                                    });
+                        }
+
+                        $("#loanStartDate").focus(function () {
+                            $('.fields').css('overflow', 'hidden');  //ADD THIS
+                        });
+
+                        $("#loanEndDate").focus(function () {
+                            $('.fields').css('overflow', 'hidden');  //ADD THIS
+                        });
+
+                        $("#loanStartDate").focusout(function () {
+                            $('.fields').css('overflow', 'scroll');  //ADD THIS
+                        });
+
+                        $("#loanEndDate").focusout(function () {
+                            $('.fields').css('overflow', 'scroll');  //ADD THIS
+                        });
+
+                        $(function () {
+                            var availableTags = [
+                                "Antrim", "Armagh", "Carlow", "Cavan", "Clare", "Cork", "Derry", "Donegal", "Down", "Dublin", "Fermanagh", "Galway", "Kerry", "Kildare", "Kilkenny", "Laois", "Leitrim", "Limerick", "Longford", "Louth", "Mayo", "Meath", "Monaghan", "Offaly", "Roscommon", "Sligo", "Tipperary", "Tyrone", "Waterford", "Westmeath", "Wexford", "Wicklow"
+                            ];
+                            $("#county").autocomplete({
+                                source: availableTags
+                            });
+                        });
+            </script>
+        </footer>
+    </body>
+</html> 

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        <!--<link href="css/errorDiv.css" rel="stylesheet" type="text/css"/>-->
+        <link rel="icon" type="image/png" href="images/logo.png" />
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script src="js/errorJS.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            if (localStorage.getItem("language") == null)
+            {
+                localStorage.setItem("language", "English");
+            }
+
+            var url = window.location.pathname;
+            localStorage.clear();
+            var filename = url.substring(url.lastIndexOf('/') + 1);
+            if (localStorage.getItem("login") == "true" && filename == 'tutum_login.html') {
+                window.location.href = "index.html";
+            } else if (localStorage.getItem("login") == "false" && filename != 'tutum_login.html') {
+                window.location.href = "tutum_login.html";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <img class="tutum" src="images/tutum_down.png" alt=""/>
+            <a href="index.html"><div>
+                    <div class="arrow1"></div>
+                    <div class="arrow2"></div>
+                    <div class="arrow3"></div>
+                </div></a>
+        </div>
+        <!--<div class="messageDiv">
+             <a class="error_close"><b>x</b></a>
+             <div class="error_container"><b id="errorText"></b></div>
+ 
+         </div>-->
+        <div class="main">
+            <img class="background" src="images/background_img.png" alt=""/>
+            <div class="fields">
+                <input type="email" name="email" id="email"  class="b-f-n field" placeholder="Email">
+                <div class='field-img b-f-n-img'></div>
+
+                <input type="password" name="password" id="password"  class="y-i-r field" placeholder="Password">
+                <div class='field-img y-i-r-img'></div>
+
+                <input type="password" name="confirmPassword" id="confirmPassword"  class="l-s-d field" placeholder="Confirm Password">
+                <div class='field-img l-s-d-img'></div>
+
+                <input type="button" id="login" class="button-agr" value="Login" />
+            </div>
+        </div>
+        <script type="text/javascript" src="js/login_registration.js"></script>
+    </body>
+</html>

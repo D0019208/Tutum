@@ -1,0 +1,1022 @@
+body
+{
+    background-color: #EBEBEB;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    position: fixed;
+
+}
+.background
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 165px;
+    z-index: -10;
+}
+
+
+/*HEADER*/
+
+.header
+{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    left: 0px;
+    top: 0px;
+
+    background: #B4B4B4;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid #000000;
+    display: inline-block;
+    z-index: -1;
+}
+
+.arrow1
+{
+    position: absolute;
+    width: 10%;
+    height: 3%;
+    top: 50%;
+    left: 4%;
+    background-color: white;
+}
+.arrow2
+{
+    position: absolute;
+    width: 5%;
+    height: 3%;
+    top: 57%;
+    left: 4%;
+    background-color: white;
+    transform: rotatez(25deg);
+}
+.arrow3
+{
+    position: absolute;
+    width: 5%;
+    height: 3%;
+    top: 43%;
+    left: 4%;
+    background-color: white;
+    transform: rotatez(-25deg);
+}
+
+.tutum
+{
+    position: absolute;
+    width: 70%;
+    height: 60%;
+    top: 20%;
+    left: 15%;
+    
+
+}
+
+span2
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    vertical-align: middle;
+
+    font-family: Rambla;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 1.5em;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+/*MAIN PAGE*/
+
+.buttons
+{
+    text-align: center;
+}
+
+p
+{
+    font-family: Rambla;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 100%;
+    
+
+    color: #555555;
+}
+
+.f-l
+{
+    position: absolute;
+    width: 45%;
+    height: 22%;
+    left: 3%;
+    top: 12%;
+    z-index: -1;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+}
+
+.f-l p
+{
+    margin-top: 10%;
+}
+
+.l-m
+{
+    position: absolute;
+    width: 45%;
+    height: 22%;
+    right: 3%;
+    top: 12%;
+    z-index: -1;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.l-m-t
+{
+    margin-top: 10%;
+}
+
+.g-a
+{
+    position: absolute;
+    width: 45%;
+    height: 22%;
+    left: 3%;
+    top: 36%;
+    z-index: -1;
+    
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.g-a-t
+{
+    margin-top: 10%;
+}
+
+.r-l
+{
+    position: absolute;
+    width: 45%;
+    height: 22%;
+    right: 3%;
+    top: 36%;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.r-l-t
+{
+    margin-top: 10%;
+}
+
+.b-s
+{
+    position: absolute;
+    width: 45%;
+    height: 22%;
+    left: 3%;
+    top: 60%;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.b-s-t
+{
+    margin-top: 10%;
+}
+
+.k-c
+{
+    position: absolute;
+    width: 45%;
+    height: 22%;
+    right: 3%;
+    top: 60%;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.k-c-t
+{
+    margin-top: 10%;
+}
+
+.buttons img
+{
+    margin-top: 15%;
+    width: 27%;
+    
+}
+
+/*FOOTER*/
+
+.footer
+{
+    position: absolute;
+    width: 100%;
+    height: 8%;
+    left: 0px;
+    bottom: 0px;
+    background-color: white;
+    text-align: center;
+
+    border-top: 1px solid #000000;
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.contracts
+{
+    position: absolute;
+    left: 10%;
+    margin-top: 2.5%;
+    
+    height: 65%;
+}
+
+.home
+{
+    margin-top: 2.5%;
+    
+    height: 65%;
+}
+
+.settings
+{
+    position: absolute;
+    right: 10%;
+    margin-top: 2.5%;
+    
+    height: 65%;
+}
+
+/*LOAN MONEY FORM, SETTINGS*/
+
+::placeholder
+{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    
+
+    color: #a0a0a0;
+}
+
+.field
+{
+    position: absolute;
+    width: 89%;
+    height: 6%;
+    left: 5.5%;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    padding-left: 15%;
+    padding-right: 10%;
+    
+
+    color: #656565;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.field-img
+{
+    position: absolute;
+    width: 14%;
+    height: 6%;
+    left: 5.5%;
+
+    background: #EBEBEB;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/*.fields img
+{
+    position: absolute;
+    width: 7%;
+    left: 85%;
+    padding-top: 2%;
+}*/
+
+.images
+{
+    position: absolute;
+    width: 7%;
+    left: 85%;
+    padding-top: 2%;    
+}
+
+.field-img img
+{
+    width: 70%;
+    left: 16%;
+}
+
+.l-f-n,.l-f-n-img,.c-f-n,.c-f-n-img,.i1
+{
+    top: 13%;
+}
+
+.l-e,.l-e-img,.c-l-n,.c-l-n-img,.i2
+{
+    top: 22%;
+}
+
+.l-a,.l-a-img,.c-p-1,.c-p-1-img,.i3
+{
+    top: 31%;
+}
+
+.b-f-n,.b-f-n-img,.c-p-2,.c-p-2-img,.i4
+{
+    top: 40%;
+}
+
+.b-e,.b-e-img,.c-e,.c-e-img,.i5
+{
+    top: 49%;
+}
+
+.c,.c-img,.c-c,.c-c-img,.i6
+{
+    top: 58%;
+}
+
+.y-i-r,.y-i-r-img,.c-h-a,.c-h-a-img,.i7
+{
+    top: 67%;
+}
+
+.l-s-d,.l-s-d-img,.c-dob,.c-dob-img,.i8
+{
+    top: 76%;
+}
+
+.l-r-b,.l-r-b-img,.i9
+{
+    top: 85%;
+}
+
+.submit-changes,.logout
+{
+    position: absolute;
+    width: 88%;
+    height: 6%;
+    left: 6%;
+    padding-top: 0.5%;
+
+    background: #51BCFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 160%;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.submit-changes
+{
+    top: 92%;
+}
+.logout
+{
+    top: 101%;
+    background-color: red;
+}
+
+/*MY CONTRACT*/
+
+.my_cont
+{
+    position: absolute;
+    width: 92%;
+    height: 15%;
+    left: 4%;
+    top: 12.5%;
+
+    padding-top: 1%;
+    padding-right: 1%;
+    padding-left: 28%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    
+    font-family: Rambla;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 80%;
+}
+
+.cont-img
+{
+    position: absolute;
+    width: 30%;
+    height: 102%;
+    left: -1%;
+    top: -1%;
+
+    padding-top: 3%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    
+    font-family: Rambla;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 100%;
+    text-align: center;
+
+    color: #555555;
+}
+
+.cont-img img
+{
+    width: 45%;
+}
+
+/*AGREEMENT*/
+
+.simple
+{
+    position: absolute;
+    width: 92%;
+    height: 6%;
+    left: 4%;
+    top: 11.5%;
+    padding-top: 0.5%;
+
+    background: lightgray;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 160%;
+    text-align: center;
+
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* The Modal (background) */
+.smodal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 22%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+}
+
+/* Modal Content */
+.smodal-content1 {
+    background-color: #fefefe;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #888;
+    width: 92%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    height: 79%;
+}
+
+
+
+/* The Close Button */
+.sclose {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+    padding-right: 8px;
+}
+
+.sclose:hover,
+.sclose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.smodal-content1 h3
+{
+    text-align: center;
+}
+
+.smodal-content1 p 
+{
+    padding-left: 4%;
+}
+
+.agr
+{
+    position: absolute;
+    width: 92%;
+    height: 63%;
+    left: 4%;
+    top: 19%;
+    padding: 2%;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    
+    overflow-y: scroll;
+}
+
+.button-agr
+{
+    position: absolute;
+    width: 92%;
+    height: 7%;
+    left: 4%;
+    top: 83.5%;
+    padding-top: 1.5%;
+
+    background: #51BCFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 160%;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.box1
+{
+    width: 100%;
+    height: 10%;
+    left: 3%;
+
+    background: #C2EAFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    
+    padding: 2.5%;
+    margin-bottom: 7%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 150%;
+    text-align: center;
+
+    color: #51BCFF;
+}
+
+.box2
+{
+    width: 100%;
+    height: 10%;
+    left: 3%;
+
+    background: #C2EAFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;    
+    
+    padding: 2.5%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 150%;
+    text-align: center;
+
+    color: #51BCFF;
+    margin-bottom: 4.5%;
+}
+
+/*LOGIN / REGISTRATION*/
+.logo
+{
+    text-align: center;
+}
+.logo img
+{
+    width: 75%; 
+    height: 37.5%; 
+    position: inherit;
+}
+
+.email-login
+{
+    position: absolute;
+    width: 89%;
+    height: 7%;
+    left: 5.5%;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    padding-left: 7%;
+    top: 43%;
+    
+
+    color: gray;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.password-login
+{
+    position: absolute;
+    width: 89%;
+    height: 7%;
+    left: 5.5%;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    padding-left: 7%;
+    top:53%;
+
+    color: gray;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button-log
+{
+    position: absolute;
+    width: 89%;
+    height: 7%;
+    left: 5.5%;
+    top: 63%;
+    padding-top: 1.5%;
+
+    background: #51BCFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 25px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 160%;
+    text-align: center;
+
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.span-log
+{
+    top: 72%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: #626262;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.fields
+{
+    overflow-y: scroll;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+.fname-reg,.lname-reg,.country-reg,.email-reg,.password-reg,.confPassword-reg,.dob-reg,.mobile-reg,.address-reg
+{
+    position: absolute;
+    width: 89%;
+    height: 7%;
+    left: 5.5%;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    padding-left: 7%;
+
+    color: #656565;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.fname-reg
+{
+    top:43%;
+}
+
+.lname-reg
+{
+    top:53%;
+}
+
+.country-reg
+{
+    top:63%;
+}
+.email-reg
+{
+    top:73%;
+}
+.password-reg
+{
+    top:83%;
+}
+.confPassword-reg
+{
+    top:93%;
+}
+.dob-reg
+{
+    top:103%;
+}
+.mobile-reg
+{
+    top:113%;
+}
+.address-reg
+{
+    top:123%;
+}
+
+.button-reg
+{
+    position: absolute;
+    width: 89%;
+    height: 7%;
+    left: 5.5%;
+    top: 133%;
+    padding-top: 1.5%;
+
+    background: #51BCFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 25px;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 160%;
+    text-align: center;
+
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.span-reg
+{
+    top: 142%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: #626262;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.br
+{
+    position: absolute; 
+    width: 100%; 
+    height: 25%; 
+    top: 170%;
+}
+
+/* The Modal (background) */
+.modal,.modal2,.modal3,.modal4,.modal5,.modal6,.modal7,.modal8,.modal9 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+}
+
+/* Modal Content */
+.modal-content1,.modal-content2,.modal-content3,.modal-content4,.modal-content5,.modal-content6,.modal-content7,.modal-content8,.modal-content9 {
+    background-color: #fefefe;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45%;
+    border: 1px solid #888;
+    width: 90%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    height: 30%;
+    text-align: center;
+}
+
+
+
+/* The Close Button */
+.close,.close2,.close3,.close4,.close5,.close6,.close7,.close8,.close9 {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+    padding-right: 8px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media(min-height:0px) and (max-height: 480px)
+{
+    p
+{
+    font-family: Rambla;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 80%;
+    
+
+    color: #555555;
+}
+}
+@media(min-height:480px) and (max-height: 520px)
+{
+    p
+{
+    font-family: Rambla;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 90%;
+    
+
+    color: #555555;
+}
+}
+
+/* LEND/BORROW CHOICE */
+.choice
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.lend
+{
+    position: absolute;
+    margin-left: 5.5%;
+    width: 89%;
+    height: 7%;
+    top: 35%;
+    
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    
+    padding: 2%;
+    
+    color: gray;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.borrow
+{
+    position: absolute;
+    margin-left: 5.5%;
+    width: 89%;
+    height: 7%;
+    top: 45%;
+    
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    
+    padding: 2%;
+    
+    color: gray;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.flag-text { margin-left: 10px; }
+
+
+

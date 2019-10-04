@@ -1,0 +1,38 @@
+{
+    "contract1": "Bнештатно",
+    "contract2": "Одолжить денег",
+    "contract3": "Правила для гостей",
+    "contract4": "Аренда/Давать в долг",
+    "contract5": "Купить/продать",
+    "contract6": "Держать в секрете",
+    
+    "lenderFullName": "Полное имя кредитора",
+    "lenderEmail": "Электронная почта кредитора",
+    "loanAmmount": "Сумма кредита (€)",
+    "borrowerFullName": "Полное имя заемщика",
+    "borrowerEmail": "Электронная почта заемщиков",
+    "county": "Oкруг",
+    "interest": "Годовая процентная ставка",
+    "loanStartDate": "Дата начала займа",
+    "loanEndDate": "Дата окончания займа",
+    
+    "modalLenderFullName": "Это полное имя человека, который одалживает деньги.",
+    "modalLenderEmail": "Это электронная почта человека, который одалживает деньги.",
+    "modalLoanAmount": "Это сумма (€), которую кредитор ссужает заемщику.",
+    "modalBorrowerFullName": "Это полное имя человека, который занимает деньги.",
+    "modalBorrowerEmail": "Это электронная почта человека, который одалживает деньги.",
+    "modalCounty": "Этот ответ будет определять, какой закон юрисдикции регулирует договор.",
+    "modalInterest": "Это годовой процентный процент, который заемщик будет платить по кредиту.",
+    "modalLoanStartDate": "Это дата, когда начинается срок кредита.",
+    "modalLoanEndDate": "Это дата, к которой заемщик должен погасить кредит.",
+    
+    "modalLenderFullNameExample": "Пример: Джон Доу",
+    "modalLenderEmailExample": "Пример: Джон@gmail.com",
+    "modalLoanAmountExample": "Пример: 100",
+    "modalBorrowerFullNameExample": "Пример: Боб Смит",
+    "modalBorrowerEmailExample": "Пример: Боб@gmail.com",
+    "modalCountyExample": "Пример: Лаут",
+    "modalInterestExample": "Пример: 1",
+    "modalLoanStartDateExample": "Пример: 15 Февраль 2019",
+    "modalLoanEndDateExample": "Пример: 15 Февраль 2020"
+}
